@@ -7,6 +7,9 @@ using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
+using System.Linq;
+using Antonov.Models;
+
 
 namespace Antonov
 {
@@ -71,6 +74,14 @@ namespace Antonov
         {
 
         }
+
+        public IQueryable<Category> GetCategories()
+        {
+            var _db = new ProductContext();
+            IQueryable<Category> query = _db.Categories;
+            return query;
+        }
+
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
         {

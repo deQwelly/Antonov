@@ -7,7 +7,9 @@ namespace Antonov.Models
         public ProductContext() : base("Antonov")
         {
         }
+
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
     }
 }
+

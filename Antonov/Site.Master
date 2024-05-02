@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - мое приложение ASP.NET</title>
+    <title><%: Page.Title %> - Проект Антонова Алексея Михайловича, студента</title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
@@ -39,14 +39,14 @@
 
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" runat="server" href="~/">Имя приложения</a>
+                <a class="navbar-brand" runat="server" href="~/">Магазин Antonov</a>
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Переключить навигацию" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/">Домашняя страница</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/ProductList">Lego-продукция</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/About">Информация</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact">Связаться с нами</a></li>
                     </ul>
@@ -69,12 +69,33 @@
                 </div>
             </div>
         </nav>
+         <div id="TitleContent" style="text-align: center">
+            <a runat="server" href="~/">
+                <asp:Image  ID="Image1" runat="server" ImageUrl="~/Images/logo.jpg" BorderStyle="None" />
+            </a>  
+            <br />  
+        </div>
+        <div id="CategoryMenu" style="text-align: center">       
+            <asp:ListView ID="categoryList"
+                ItemType="Antonov.Models.Category" 
+                runat="server"
+                SelectMethod="GetCategories" >
+                <ItemTemplate>
+                    <b style="font-size: large; font-style: normal">
+                        <a href="/ProductList.aspx?id=<%#: Item.CategoryID %>">
+                        <%#: Item.CategoryName %>
+                        </a>
+                    </b>
+                </ItemTemplate>
+                <ItemSeparatorTemplate>  |  </ItemSeparatorTemplate>
+                </asp:ListView>
+        </div>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - мое приложение ASP.NET</p>
+                <p>&copy; <%: DateTime.Now.Year %> - Приложение Лего-магазин в проекте Antonov</p>
             </footer>
         </div>
     </form>

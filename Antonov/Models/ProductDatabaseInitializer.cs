@@ -12,46 +12,44 @@ namespace Antonov.Models
             GetProducts().ForEach(p => context.Products.Add(p));
         }
 
-
         private static List<Category> GetCategories()
         {
             var categories = new List<Category> {
-                    new Category
-                    {
-                        CategoryID = 1,
-                        CategoryName = "Машины"
-                    },
-                    new Category
-                    {
-                        CategoryID = 2,
-                        CategoryName = "Самолеты"
-                    },
-                    new Category
-                    {
-                        CategoryID = 3,
-                        CategoryName = "Грузовики"
-                    },
-                    new Category
-                    {
-                        CategoryID = 4,
-                        CategoryName = "Корабли"
-                    },
-                    new Category
-                    {
-                        CategoryID = 5,
-                        CategoryName = "Ракеты"
-                    },
-                    new Category
-                    {
-                        CategoryID = 6,
-                        CategoryName = "Новинки"
-                    },
-                };
-
+                new Category
+                {
+                    CategoryID = 1,
+                    CategoryName = "Машины"
+                },
+                new Category
+                {
+                    CategoryID = 2,
+                    CategoryName = "Самолеты"
+                },
+                new Category
+                {
+                    CategoryID = 3,
+                    CategoryName = "Грузовики"
+                },
+                new Category
+                {
+                    CategoryID = 4,
+                    CategoryName = "Корабли"
+                },
+                new Category
+                {
+                    CategoryID = 5,
+                    CategoryName = "Ракеты"
+                },
+                new Category
+                {
+                    CategoryID = 6,
+                    CategoryName = "Новинки"
+                },
+            };
 
             return categories;
         }
-
+    
 
         private static List<Product> GetProducts()
         {
@@ -61,11 +59,11 @@ namespace Antonov.Models
                     ProductID = 1,
                     ProductName = "Convertible Car",
                     Description = "This convertible car is fast! The engine is powered by a neutrino based battery (not included)." +
-                                    "Power it up and let it go!",
+                                  "Power it up and let it go!",
                     ImagePath="carconvert.png",
                     UnitPrice = 22.50,
                     CategoryID = 1
-                },
+               },
                 new Product
                 {
                     ProductID = 2,
@@ -73,8 +71,8 @@ namespace Antonov.Models
                     Description = "There's nothing old about this toy car, except it's looks. Compatible with other old toy cars.",
                     ImagePath="carearly.png",
                     UnitPrice = 15.95,
-                        CategoryID = 1
-                },
+                     CategoryID = 1
+               },
                 new Product
                 {
                     ProductID = 3,
@@ -98,7 +96,7 @@ namespace Antonov.Models
                     ProductID = 5,
                     ProductName = "Old Style Racer",
                     Description = "This old style racer can fly (with user assistance). Gravity controls flight duration." +
-                                    "No batteries required.",
+                                  "No batteries required.",
                     ImagePath="carracer.png",
                     UnitPrice = 34.95,
                     CategoryID = 1
@@ -171,7 +169,7 @@ namespace Antonov.Models
                     ProductID = 13,
                     ProductName = "Big Ship",
                     Description = "Is it a boat or a ship. Let this floating vehicle decide by using its " +
-                                    "artifically intelligent computer brain!",
+                                  "artifically intelligent computer brain!",
                     ImagePath="boatbig.png",
                     UnitPrice = 95.00,
                     CategoryID = 4
@@ -181,7 +179,7 @@ namespace Antonov.Models
                     ProductID = 14,
                     ProductName = "Paper Boat",
                     Description = "Floating fun for all! This toy boat can be assembled in seconds. Floats for minutes!" +
-                                    "Some folding required.",
+                                  "Some folding required.",
                     ImagePath="boatpaper.png",
                     UnitPrice = 4.95,
                     CategoryID = 4
@@ -205,6 +203,7 @@ namespace Antonov.Models
                     CategoryID = 5
                 }
             };
+
 
             return products;
         }

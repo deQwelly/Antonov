@@ -1,19 +1,18 @@
-﻿<%@ Page Title="Contact" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="Antonov.Contact" %>
+﻿<%@ Page Title="СВЯЗЬ" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="Antonov.Contact" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <main aria-labelledby="title">
         <h2 id="title"><%: Title %>.</h2>
-        <h3>Your contact page.</h3>
+        <h3>Наши контакты</h3>
         <address>
-            One Microsoft Way<br />
-            Redmond, WA 98052-6399<br />
-            <abbr title="Phone">P:</abbr>
-            425.555.0100
+            Московский Политех<br />
+            Автозаводская ул., 16, Москва, 115280<br />
+            Телефонный номер: 000-000-00-00
         </address>
 
         <address>
-            <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-            <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+            <strong>Поддержка:</strong>   <a href="antonovaleksej320@gmail.com">antonovaleksej320@gmail.com</a><br />
+            <strong>Предложения:</strong> <a href="antonovaleksej320@gmail.com">antonovaleksej320@gmail.com</a>
         </address>
     </main>
 </asp:Content>
