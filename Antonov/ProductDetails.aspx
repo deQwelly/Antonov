@@ -22,6 +22,11 @@
                         <br />
                         <span><b>Product Number:</b>&nbsp;<%#:Item.ProductID %></span>
                         <br />
+                        <a href="/AddToCart.aspx?productID=<%#:Item.ProductID %>">               
+                                        <span class="ProductListItem">
+                                            <b>Добавить в корзину <b>
+                                        </span>           
+                        </a>
                     </td>
                 </tr>
             </table>
